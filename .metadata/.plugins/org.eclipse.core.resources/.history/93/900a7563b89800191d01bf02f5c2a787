@@ -1,0 +1,27 @@
+package com.code.springlearn;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class HelloSpringApp {
+
+	public static void main(String[] args) {
+
+		//Load the spring configuration file
+		ClassPathXmlApplicationContext context = 
+				new ClassPathXmlApplicationContext("applicationContext.xml");
+		
+		//Retrieve bean from Spring Container
+		Coach cricCoach=context.getBean("cricCoach",Coach.class);
+		Coach trackCoach = context.getBean("trackCoach",Coach.class);
+		
+		//Call Methods on Bean
+		System.out.println(cricCoach.getDailyWorkout());
+		System.out.println(cricCoach.formTeam(11));
+		System.out.println(trackCoach.getDailyWorkout());
+		System.out.println(trackCoach.formTeam(4));
+		
+		//Close context
+		context.close();
+	}
+
+}

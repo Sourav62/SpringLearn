@@ -1,0 +1,8 @@
+package com.code.springlearn;
+
+public class CricketCoach {
+
+	public String getDailyWorkout() {
+		return "Batting for 30 minutes";
+	}
+}

@@ -1,0 +1,6 @@
+package com.code.springlearn;
+
+public interface Coach {
+
+	public String getDailyWorkout();
+}
