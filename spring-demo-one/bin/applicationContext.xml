@@ -12,6 +12,8 @@
     <bean id="cricCoach"
     	class="com.code.springlearn.CricketCoach">
     	
+    	<!-- Setup the setter injection -->
+    	<property name="fortuneService" ref="myFortune"></property>
     </bean>
     
     <bean id="trackCoach" 
@@ -25,6 +27,7 @@
     	<!-- Set up constructor injection -->
     	<constructor-arg ref="myFortune"/>
     </bean>
+    
     
    	<!-- Define Dependency -->
     <bean id="myFortune"

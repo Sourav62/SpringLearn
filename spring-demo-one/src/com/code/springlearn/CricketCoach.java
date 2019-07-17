@@ -2,6 +2,25 @@ package com.code.springlearn;
 
 public class CricketCoach implements Coach{
 
+	
+	
+	private FortuneService fortuneService;
+	
+	//Create a no-arg constructor
+	
+	public CricketCoach() {
+		System.out.println("Inside the constructor");
+	}
+	
+	
+	
+	public void setFortuneService(FortuneService fortuneService) {
+		System.out.println("Inside the setter method - setFortuneService");
+		this.fortuneService = fortuneService;
+	}
+
+
+
 	@Override
 	public String getDailyWorkout() {
 		return "Batting for 30 minutes";
@@ -15,6 +34,6 @@ public class CricketCoach implements Coach{
 	@Override
 	public String getFortune() {
 		// TODO Auto-generated method stub
-		return null;
+		return fortuneService.getFortune();
 	}
 }
